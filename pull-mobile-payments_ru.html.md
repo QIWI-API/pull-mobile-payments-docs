@@ -7,6 +7,10 @@ metatitle: Mobile payments API 2.1 Мобильная коммерция
 
 metadescription: Mobile payments API Мобильная коммерция открывает доступ к операциям с балансом вашемо счета у сотового оператора из вашего приложения. Поддерживаются операции инициирования оплаты счета с мобильного телефона, а также проверки статуса выполнения операций.
 
+language_tabs:
+  - shell
+  - php
+
 services:
  - <a href='#'>Swagger</a>  |  <a href='#'>Qiwi Demo</a>
 
@@ -21,7 +25,7 @@ includes:
 
 # Платежи с баланса мобильного оператора {#introduction}
 
-###### Последнее обновление: 2017-10-05 | [Редактировать на GitHub](https://github.com/QIWI-API/pull-mobile-payments-docs/blob/master/pull-mobile-payments_ru.html.md)
+###### Последнее обновление: 2017-10-05 | [Редактировать на GitHub](https://github.com/QIWI-API/pull-payments-docs/blob/master/pull-mobile-payments_ru.html.md)
 
 Mobile Payments API открывает доступ к операциям сплатежами из вашего сервиса. Поддерживаются следующие операции:
 
