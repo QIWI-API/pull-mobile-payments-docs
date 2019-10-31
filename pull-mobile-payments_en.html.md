@@ -16,7 +16,7 @@ services:
 
 
 toc_footers:
- - <a href='/'>Home page</a>
+ - <a href='/en/index.html'>Home page</a>
 
 includes:
   - pull-payments/notification_en
@@ -99,15 +99,19 @@ The request initiates a new payment for a specified mobile phone number. Request
 
 To confirm payment, customer's mobile network operator send SMS with code to the specified phone number.
 
+<h3 class="request method">Request → PUT</h3>
+
 ~~~shell
 user@server:~$ curl "https://api.qiwi.com/api/v2/prv/373712/bills/BILL-1"
   -X PUT --header "Accept: text/json"
   --header "Authorization: Basic ***"
   -d 'user=tel%3A%2B79161111111&amount=10.00&ccy=RUB&comment=test&pay_source=mobile&lifetime=2016-09-25T15:00:00'
+~~~
 
-
+~~~http
 HTTP/1.1 200 OK
 Content-Type: text/json
+
 {
   "response": {
      "result_code": 0,
@@ -123,8 +127,6 @@ Content-Type: text/json
   }
 }
 ~~~
-
-<h3 class="request method">Request → PUT</h3>
 
 <ul class="nestedList url">
     <li><h3>URL <span>https://api.qiwi.com/api/v2/prv/<a>prv_id</a>/bills/<a>bill_id</a></span></h3>
@@ -164,9 +166,11 @@ The given PHP example implements creation of the invoice. This example demonstra
 
 <h3 class="request">Response ←</h3>
 
-~~~shell
+> Successful response
 
+~~~http
 HTTP/1.1 200 OK
+
 Content-Type: text/json;charset=utf-8
 {
   "response": {
@@ -182,10 +186,14 @@ Content-Type: text/json;charset=utf-8
      }
   }
 }
+~~~
 
+> Error Response
 
-HTTP/1.1 500
+~~~http
+HTTP/1.1 500 Internal Server Error
 Content-Type: text/json;charset=utf-8
+
 {
  "response": {
   "result_code": 150,
@@ -286,10 +294,12 @@ user@server:~$ curl "https://api.qiwi.com/api/v2/prv/373712/bills/sdf23452435"
 
 <h3 class="request">Response ←</h3>
 
-~~~shell
+> Successful Response
 
+~~~http
 HTTP/1.1 200 OK
 Content-Type: text/json
+
 {
   "response": {
      "result_code": 0,
@@ -306,10 +316,14 @@ Content-Type: text/json
      }
   }
 }
+~~~
 
+> Error response
 
-HTTP/1.1 500
+~~~http
+HTTP/1.1 500 Internal Server Error
 Content-Type: text/json
+
 {
  "response": {
   "result_code": 150,
@@ -373,12 +387,10 @@ Code| Description |[Fatal](#fatal)
 339|IP-addresses blocked|Y
 341|Required parameter is incorrectly specified or absent in the request|Y
 700|Monthly limit on operations is exceeded|Y
-774|QIWI Wallet user account temporarily blocked|Y
+774|QIWI Wallet user account temporarily blocked<a name="fatal"></a>|Y
 1001|Currency is not allowed for the merchant|Y
 1003|No convert rate for these currencies|N
 1019|Unable to determine wireless operator for MNO balance payment|Y
 1419|Bill was already payed|Y
-
-<a name="fatal"></a>
 
 <aside class="notice"><b>Fatal</b> means the result will not change with the second and subsequent requests (error is not temporary)</aside>
