@@ -16,7 +16,7 @@ services:
 
 
 toc_footers:
- - <a href='/en/index.html'>Home page</a>
+ - <a href='/en/'>Home page</a>
 
 includes:
   - pull-payments/notification_en
@@ -47,15 +47,13 @@ Payment flow processes as follows:
 
    ![Mobile SMS](/images/pull_mobile.jpg){:height="45%" width="45%"}
 
-      ![Mobile SMS](/images/pull_mobile.jpg){:height="45%" width="45%"}
-
 4. If the merchant enables [notifications to merchant's server](#notification_en), then QIWI system sends a notification (web-hook) of the invoice payment to the merchant's server once invoice is paid. Authorization on the merchant's side is required for notifications.
 
    If merchant does not use notifications, they can [request current payment status](#invoice-status) of the invoice.
 
 5.  When the invoice payment is confirmed, merchant delivers ordered services/goods.
 
-**To use API, complete [registration and approvement of the agreement](https://kassa.qiwi.com).**
+**To use API, complete [registration and approval of the agreement](https://kassa.qiwi.com).**
 
 
 ## Authorization {#auth_param}
