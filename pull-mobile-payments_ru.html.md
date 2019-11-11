@@ -122,7 +122,7 @@ Content-Type: text/json
     <li><h3>URL <span>https://api.qiwi.com/api/v2/prv/<a>prv_id</a>/bills/<a>bill_id</a></span></h3>
         <ul>
         <strong>В path params PUT-запроса используются два параметра счета:</strong>
-             <li><strong>prv_id</strong> - числовой идентификатор провайдера (идентификатор проекта на партнерском сайте kassa.qiwi.com)</li>
+             <li><strong>prv_id</strong> - числовой идентификатор провайдера (идентификатор проекта на партнерском сайте <a href="https://kassa.qiwi.com">kassa.qiwi.com</a>)</li>
              <li><strong>bill_id</strong> - уникальный идентификатор счета в системе провайдера.</li>
         </ul>
     </li>
@@ -267,7 +267,7 @@ user@server:~$ curl "https://api.qiwi.com/api/v2/prv/373712/bills/BILL-1"
     <li><h3>URL <span>https://api.qiwi.com/api/v2/prv/<a>prv_id</a>/bills/<a>bill_id</a></span></h3>
         <ul>
         <strong>Параметры передаются в path params.</strong>
-             <li><strong>prv_id</strong> - числовой идентификатор провайдера (идентификатор проекта на партнерском сайте kassa.qiwi.com)</li>
+             <li><strong>prv_id</strong> - числовой идентификатор провайдера (идентификатор проекта на партнерском сайте <a href="https://kassa.qiwi.com">kassa.qiwi.com</a>)</li>
              <li><strong>bill_id</strong> - уникальный идентификатор счета в системе провайдера.</li>
         </ul>
     </li>
