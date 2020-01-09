@@ -25,7 +25,7 @@ includes:
 
 # Платежи с баланса мобильного оператора
 
-###### Последнее обновление: 2017-10-05 | [Редактировать на GitHub](https://github.com/QIWI-API/pull-payments-docs/blob/master/pull-mobile-payments_ru.html.md)
+###### Последнее обновление: 2017-10-05 | [Редактировать на GitHub](https://github.com/QIWI-API/pull-mobile-payments-docs/blob/master/pull-mobile-payments_ru.html.md)
 
 Mobile Payments API открывает доступ к операциям с платежами из вашего сервиса. Поддерживаются следующие операции:
 
