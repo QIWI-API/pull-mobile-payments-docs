@@ -201,11 +201,11 @@ Content-Type: text/json;charset=utf-8
 ~~~
 
 <ul class="nestedList params">
-    <li><a href="#parameters"><h3>Parameters</h3></a>
+    <li><a href="#parameters"><h3>Fields</h3></a>
     </li>
 </ul>
 
-Parameter|Type|Description
+Response field|Type|Description
 --------|---|--------
 result_code|Integer|[Error code](#errors)
 description|String|Error description. Returned when `result_code` is non-zero.
@@ -330,11 +330,11 @@ Content-Type: text/json
 ~~~
 
 <ul class="nestedList params">
-    <li><h3>Parameters</h3>
+    <li><h3>Fields</h3>
     </li>
 </ul>
 
-Parameter|Type|Description
+Response field |Type|Description
 --------|---|--------
 result_code|Integer|[Error code](#errors)
 description|String|Error description. Returned when `result_code` is non-zero.

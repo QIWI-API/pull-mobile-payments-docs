@@ -133,7 +133,7 @@ Content-Type: text/json
         <ul>
              <li>Accept: text/json - формат ответа JSON</li>
              <li>Content-type: application/x-www-form-urlencoded; charset=utf-8</li>
-             <li>Authorization: Basic ***</li>
+             <li>Authorization: Basic XXX</li>
         </ul>
     </li>
 </ul>
@@ -192,11 +192,11 @@ Content-Type: text/json;charset=utf-8
 ~~~
 
 <ul class="nestedList params">
-    <li><a href="#parameters"><h3>Параметры</h3></a>
+    <li><a href="#parameters"><h3>Поля ответа</h3></a>
     </li>
 </ul>
 
-Параметр|Тип|Описание
+Поле ответа|Тип|Описание
 --------|---|--------
 result_code|Integer|[Код результата](#errors)
 description|String|Описание ошибки. Передается в случае ошибки
@@ -276,7 +276,7 @@ user@server:~$ curl "https://api.qiwi.com/api/v2/prv/373712/bills/BILL-1"
 <ul class="nestedList header">
     <li><h3>HEADERS</h3>
         <ul>
-             <li>Authorization: Basic ***</li>
+             <li>Authorization: Basic XXX</li>
              <li>Accept: text/json или Accept: application/json - формат ответа JSON</li>
         </ul>
     </li>
@@ -323,11 +323,11 @@ Content-Type: text/json
 ~~~
 
 <ul class="nestedList params">
-    <li><h3>Параметры</h3>
+    <li><h3>Поля ответа</h3>
     </li>
 </ul>
 
-Параметр|Тип|Описание
+Поле ответа|Тип|Описание
 --------|---|--------
 result_code|Integer|[Код результата](#errors)
 description|String|Описание ошибки. Передается в случае ошибки
