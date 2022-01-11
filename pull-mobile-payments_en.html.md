@@ -120,7 +120,7 @@ Content-Type: text/json
         "status": "waiting",
         "error": 0,
         "user": "tel:+79161111111",
-        "comment": "test"
+        "comment": "Text comment"
      }
   }
 }
@@ -180,7 +180,7 @@ Content-Type: text/json;charset=utf-8
         "status": "waiting",
         "error": 0,
         "user": "tel:+79031234567",
-        "comment": "test"
+        "comment": "Text comment"
      }
   }
 }
@@ -235,7 +235,7 @@ $data = array(
     "user" => "tel:+" . $PHONE,
     "amount" => "1000.00",
     "ccy" => "RUB",
-    "comment" => "All good",
+    "comment" => "Goods from basket",
     "lifetime" => "2015-01-30T15:35:00",
     "pay_source" => "mobile"
 );
@@ -309,7 +309,7 @@ Content-Type: text/json
         "status": "paid",
         "error": 0,
         "user": "tel:+79031234567",
-        "comment": "test"
+        "comment": "Text comment"
      }
   }
 }
