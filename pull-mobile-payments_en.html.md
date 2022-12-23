@@ -72,11 +72,11 @@ user@server:~$ curl "server_address"
 
 ### Service data {#auth_param}
 
-Parameter|Description|Type|Required
- ---------|--------|---|------
- API_ID | Provider API identifier for authorization | Integer| +
- API_PASSWORD | API password for authorization| String | +
- Shop ID | Numeric identifier of the provider's service | Integer | +
+Parameter|Description|Type
+ ---------|--------|------
+ API_ID | **Required**. Provider API identifier for authorization | Integer
+ API_PASSWORD | **Required**. API password for authorization| String
+ Shop ID | **Required**. Numeric identifier of the provider's service | Integer
 
 <aside class="notice">
 To obtain service data, open "Protocols - REST - Authorization" section on <a href='http://kassa.qiwi.com'>kassa.qiwi.com</a>
@@ -151,14 +151,18 @@ Content-Type: text/json
 </li>
 </ul>
 
-Parameter|Description|Type|Required
----------|--------|---|------
-user | The QIWI Wallet user’s ID, to whom the invoice is issued. It is the user’s phone number with `tel:` prefix | String(20)|Y
-amount | The invoice amount. The number is rounded down with two decimal places | Number(6.2)|Y
-ccy | Invoice currency identifier (Alpha-3 ISO 4217 code). Depends on currencies allowed for the merchant in QIWI system | String(3)|Y
-comment | Comment to the invoice | String(255)|Y
-lifetime | Date and time up to which the invoice is available for payment, URL-encoded ISO 8601 (`YYYY-MM-DDThh:mm:ss`), Moscow timezone. If the invoice is not paid by this date it will become void and will be assigned a final status.<br> **Important! Invoice will be automatically expired when 45 days is passed after the invoicing date** |dateTime|Y
-pay_source |`mobile`  - the customer's MNO balance will be used as a funding source for the payment| String|Y
+Parameter|Description|Type
+---------|--------|--------
+user | **Required**. The QIWI Wallet user’s ID, to whom the invoice is issued. It is the user’s phone number with `tel:` prefix | String(20)
+<<<<<<< HEAD
+amount | **Required**. The invoice amount. The number is rounded down with two decimal places | Number(6.2)|Y
+=======
+amount | **Required**. The invoice amount. The number is rounded down with two decimal places | Number(6.2)
+>>>>>>> 842a7af... Required column is moved to parameter description
+ccy | Invoice currency identifier (Alpha-3 ISO 4217 code). Depends on currencies allowed for the merchant in QIWI system | String(3)
+comment | **Required**. Comment to the invoice | String(255)
+lifetime | **Required**. Date and time up to which the invoice is available for payment, URL-encoded ISO 8601 (`YYYY-MM-DDThh:mm:ss`), Moscow timezone. If the invoice is not paid by this date it will become void and will be assigned a final status.<br> **Important! Invoice will be automatically expired when 45 days is passed after the invoicing date** |dateTime
+pay_source |**Required**. A funding source for the payment — the customer's MNO balance | `mobile` only
 
 The given PHP example implements creation of the invoice. This example demonstrates using merchant's [authorization parameters](#auth_param), i.e. shop ID, API ID and password for the API ID. Open the _PHP_ tab on the right.
 
@@ -201,7 +205,7 @@ Content-Type: text/json;charset=utf-8
 ~~~
 
 <ul class="nestedList params">
-    <li><a href="#parameters"><h3>Fields</h3></a>
+    <li><a name="#parameters"></a><h3>Fields</h3>
     </li>
 </ul>
 
