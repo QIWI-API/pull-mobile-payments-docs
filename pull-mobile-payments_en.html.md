@@ -25,14 +25,13 @@ includes:
 
 # Payments From Mobile Account
 
-###### Last update: 2019-10-05 | [Edit on GitHub](https://github.com/QIWI-API/pull-payments-docs/blob/master/pull-mobile-payments_en.html.md)
+###### [Edit on GitHub](https://github.com/QIWI-API/pull-payments-docs/blob/master/pull-mobile-payments_en.html.md)
 
 Mobile payments API provides access to operations with customer's mobile account from your application or service. The following operations are supported:
 
 * Payment initiation
 * Checking invoice payment status
 * Payment notifications
-
 
 ## Customer Order Payment Flow {#steps}
 
@@ -61,7 +60,7 @@ Payment flow processes as follows:
 Mobile payments API requests are authorized through HTTP Basic-authorization with [API ID and API password](#auth_param) Header is `Authorization` string and its value is `Basic Base64(API_ID:API_PASSWORD)`.
 
 ~~~shell
-user@server:~$ curl "server_address"
+curl "server_address" \
   --header "Authorization: Basic MjMyNDQxMjM6NDUzRmRnZDQ0Mw=="
 ~~~
 
@@ -100,9 +99,10 @@ To confirm payment, customer's mobile network operator send SMS with code to the
 <h3 class="request method">Request → PUT</h3>
 
 ~~~shell
-user@server:~$ curl "https://api.qiwi.com/api/v2/prv/373712/bills/BILL-1"
-  -X PUT --header "Accept: text/json"
-  --header "Authorization: Basic ***"
+curl "https://api.qiwi.com/api/v2/prv/373712/bills/BILL-1" \
+  -X PUT \
+  --header "Accept: text/json" \
+  --header "Authorization: Basic ***" \
   -d 'user=tel%3A%2B79161111111&amount=10.00&ccy=RUB&comment=test&pay_source=mobile&lifetime=2016-09-25T15:00:00'
 ~~~
 
@@ -266,10 +266,10 @@ curl_close ($ch);
 
 Using this request you can get current payment status of the invoice.
 
-
 ~~~shell
-user@server:~$ curl "https://api.qiwi.com/api/v2/prv/373712/bills/sdf23452435"
-  --header "Authorization: Basic ***" --header "Accept: text/json"
+curl "https://api.qiwi.com/api/v2/prv/373712/bills/sdf23452435" \
+  --header "Authorization: Basic ***" \
+  --header "Accept: text/json"
 ~~~
 
 <h3 class="request method">Request → GET</h3>

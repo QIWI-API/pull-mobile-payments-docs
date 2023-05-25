@@ -25,7 +25,7 @@ includes:
 
 # Платежи с баланса мобильного оператора
 
-###### Последнее обновление: 2017-10-05 | [Редактировать на GitHub](https://github.com/QIWI-API/pull-mobile-payments-docs/blob/master/pull-mobile-payments_ru.html.md)
+###### [Редактировать на GitHub](https://github.com/QIWI-API/pull-mobile-payments-docs/blob/master/pull-mobile-payments_ru.html.md)
 
 Mobile Payments API открывает доступ к операциям с платежами из вашего сервиса. Поддерживаются следующие операции:
 
@@ -61,7 +61,7 @@ Mobile Payments API открывает доступ к операциям с п�
 
 
 ~~~shell
-user@server:~$ curl "адрес сервера"
+curl "адрес сервера" \
   --header "Authorization: Basic MjMyNDQxMjM6NDUzRmRnZDQ0Mw=="
 ~~~
 
@@ -92,9 +92,9 @@ user@server:~$ curl "адрес сервера"
 <h3 class="request method">Запрос → PUT</h3>
 
 ~~~shell
-user@server:~$ curl "https://api.qiwi.com/api/v2/prv/373712/bills/BILL-1"
-  -X PUT --header "Accept: text/json"
-  --header "Authorization: Basic ***"
+curl "https://api.qiwi.com/api/v2/prv/373712/bills/BILL-1" \
+  -X PUT --header "Accept: text/json" \
+  --header "Authorization: Basic ***" \
   -d 'user=tel%3A%2B79161111111&amount=10.00&ccy=RUB&comment=test&pay_source=mobile&lifetime=2016-09-25T15:00:00'
 ~~~
 
@@ -257,8 +257,8 @@ curl_close ($ch);
 <h3 class="request method">Запрос → GET</h3>
 
 ~~~shell
-user@server:~$ curl "https://api.qiwi.com/api/v2/prv/373712/bills/BILL-1"
-  --header "Authorization: Basic ***"
+curl "https://api.qiwi.com/api/v2/prv/373712/bills/BILL-1" \
+  --header "Authorization: Basic ***" \
   --header "Accept: text/json"
 
 ~~~
